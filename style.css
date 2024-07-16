@@ -29,6 +29,9 @@ body {
 .sidebar > * {
   margin-bottom: 25px;
 }
+.dashboard-text {
+  font-size: 1.5rem;
+}
 .sidebar div,
 .sidebar li {
   display: flex;
