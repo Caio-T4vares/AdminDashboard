@@ -9,7 +9,8 @@
   font-family: "Roboto";
 }
 ul,
-ol {
+ol,
+li {
   list-style: none;
 }
 body {
@@ -49,4 +50,125 @@ body {
 }
 .sidebar .dashboard-icon {
   width: 40px;
+}
+/* Header */
+.top-section {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  padding: 16px;
+  background-color: #f0f9ff;
+  border-bottom: 4px solid #38bdf8;
+}
+.top-section input {
+  background-color: #7dd3fc;
+  border: 1px solid #7dd3fc;
+  width: 80%;
+  height: 20px;
+  border-radius: 8px;
+}
+.top-section .search {
+  grid-row: 1;
+  grid-column: 1;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.top-section > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.top-section img {
+  width: 20px;
+}
+.profile-image {
+  border-radius: 50%;
+}
+.top-section .profile-image {
+  width: 40px;
+  height: 40px;
+}
+button {
+  background-color: #0369a1;
+  border-radius: 16px;
+  padding: 6px;
+  width: 80px;
+  color: #f0f9ff;
+  border: 1px solid #0369a1;
+}
+/* Projects / cards */
+.bottom-section {
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+  padding: 24px 16px;
+  background-color: #7dd3fc;
+  column-gap: 24px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-rows: 40px repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+}
+.cards h2 {
+  grid-row: 1;
+  grid-column: 1 / -1;
+}
+.card {
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid #38bdf8;
+  border-left: 6px solid purple;
+  padding: 24px 16px;
+}
+.card p:nth-child(1) {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.card p:nth-child(2) {
+  margin-bottom: 24px;
+  color: #292929;
+}
+.icons {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  gap: 16px;
+}
+.icons img {
+  width: 20px;
+  height: 20px;
+}
+/* Announcements e trending */
+.bottom-section > div:nth-child(2) {
+  display: grid;
+  grid-template-rows: 40px 1fr 1fr;
+  gap: 24px;
+}
+.announcements {
+  border: 1px solid #38bdf8;
+  padding: 24px 16px;
+  border-radius: 8px;
+  display: grid;
+  row-gap: 8px;
+}
+.announcements div {
+  margin: 12px 0;
+}
+.announcements div p:nth-child(1) {
+  font-weight: bold;
+}
+.announcements div p:nth-child(2) {
+  font-size: 0.7rem;
+  color: #292929;
+}
+.announcements li:not(:last-child) {
+  border-bottom: 1px solid #292929;
+}
+.trending li img {
+  width: 40px;
+  height: 40px;
 }
